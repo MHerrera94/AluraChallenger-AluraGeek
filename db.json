@@ -1,0 +1,13 @@
+{
+  "user": [{}],
+  "product": [
+    {
+      "id": 1,
+      "img": "./resource/img/star-wars.png",
+      "category": "Star-wars",
+      "name_product": "Star-Wars",
+      "cost": 60.0,
+      "description": "casco de start wars"
+    }
+  ]
+}
