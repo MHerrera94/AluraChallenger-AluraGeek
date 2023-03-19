@@ -297,21 +297,26 @@
         <div class="contacto__formulario">
           <h1 class="formulario__title">Hable con nosotros</h1>
           <form class="formulario__form" action="">
-            <input
+            <div class="form__group">
+              <input
               class="form__nombre"
               type="text"
               name="nombre"
               id="nombre"
-              placeholder="Nombre y Apellido"
-            />
-            <textarea
+              placeholder=" "
+              />
+              <label for="nombre" class="form__title">Nombre y Apellido</label>              
+            </div>
+
+            <div class="form__group">
+              <input
               class="form__comentario"
               name="comentario"
               id="comentario"
-              cols="30"
-              rows="10"
-              placeholder="Escribe tu mensaje aqui"
-            ></textarea>
+              placeholder=" "
+            ></input>
+              <label for="comentario" class="form__title">Escribe tu mensaje</label>
+            </div>
             <input class="form__btn" type="submit" value="Enviar mensaje" />
           </form>
         </div>
