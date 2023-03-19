@@ -1,0 +1,146 @@
+:root {
+  --color_fondo: #f5f5f5;
+  --color_text-title: #464646;
+  --color_text-link: #2a7ae4;
+  --font-defect: "Raleway";
+}
+body {
+  background: var(--color_fondo);
+  font-family: var(--font-defect);
+}
+.container {
+  width: 98vw;
+}
+.menu {
+  display: flex;
+  background: #ffffff;
+  width: 100%;
+  padding: 3% 5%;
+  justify-content: space-between;
+}
+.menu__buscador {
+  width: 100%;
+}
+.buscador__container {
+  display: flex;
+  height: 100%;
+  background: var(--color_fondo);
+  margin-left: 3%;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.buscador__input {
+  background: none;
+  color: var(--color_text-title);
+  border: none;
+  height: 100%;
+  margin-left: 5%;
+  flex-grow: 2;
+}
+.buscador__boton {
+  padding: 1em 1.5em;
+  display: flex;
+  border: none;
+  background: url(../resource/icon/Vector.png) no-repeat center left / 1.2rem;
+}
+.menu__login {
+  display: flex;
+  flex-grow: 1;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.login__boton {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color_text-link);
+  border: 1px solid var(--color_text-link);
+}
+.banner {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.banner__img > img {
+  width: 100%;
+  position: relative;
+}
+.banner__promocion {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  color: #ffffff;
+  margin: 0 0 3em 3em;
+}
+.promocion__title {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+}
+.promocion__detalle {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+.promocion__btn {
+  text-decoration: none;
+  color: #ffffff;
+  background: var(--color_text-link);
+  padding: 1em;
+}
+.productos {
+  display: flex;
+  width: 100%;
+  padding: 3% 5%;
+  flex-direction: column;
+}
+.seccion__title {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.title__detalle {
+  font-size: 2em;
+}
+.title__btn {
+  background: url(../resource/icon/arrow_back_black_24dp\ 1.png) no-repeat
+    center right 0;
+  padding: 0 2rem 0 0;
+  text-decoration: none;
+  font-size: 1em;
+  color: var(--color_text-link);
+  font-weight: bold;
+}
+.item__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.seccion__item {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1%;
+}
+.seccion__item li {
+  margin: 0 0 5px 0;
+}
+.item__img > img {
+  width: 100%;
+}
+.item__costo {
+  font-weight: bold;
+}
+.item__link a {
+  text-decoration: none;
+  color: var(--color_text-link);
+  font-weight: bold;
+}
