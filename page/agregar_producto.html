@@ -14,7 +14,98 @@
       rel="stylesheet"
       href="https://meyerweb.com/eric/tools/css/reset/reset.css"
     />
-    <link rel="stylesheet" href="./css/myreset.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+    />
+    <link rel="stylesheet" href="../css/myreset.css" />
+    <link rel="stylesheet" href="../css/style/menu.css" />
+    <link rel="stylesheet" href="../css/style/contacto.css">
+    <link rel="stylesheet" href="../css/agregar_produto.css">
+    <link rel="stylesheet" href="../css/style/footer.css">
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <nav class="menu">
+        <div class="menu__logo">
+          <img
+            class="logo__img"
+            src="../resource/icon/Logo.png"
+            alt="Alura Logo"
+          />
+        </div>
+        <div class="menu__buscador">
+          <form class="buscador__container" action="" id="buscador">
+            <input
+              class="buscador__input"
+              type="search"
+              name="product-search"
+              id="product-search"
+              placeholder="¿Que deseas buscar?"
+            />
+            <input
+              class="buscador__boton"
+              type="submit"
+              value=""
+              id="btn-buscar"
+            />
+          </form>
+        </div>
+        <div class="menu__login">
+          <a href="./page/login.html" class="login__boton"
+            >Menu Administrador</a
+          >
+        </div>
+      </nav>
+      <section class="contacto">
+        <div class="contacto__logo">
+          <img
+            src="../resource/icon/Logo.png"
+            alt="Alura Logo"
+            class="logo__img"
+          />
+        </div>
+        <div class="contacto__informacion">
+          <ul>
+            <li class="informacion__detalle">Quienes Somos</li>
+            <li class="informacion__detalle">Política de privacidad</li>
+            <li class="informacion__detalle">Programa de Fidelidad</li>
+            <li class="informacion__detalle">Nuestras Tiendas</li>
+            <li class="informacion__detalle">Quiero ser Franquiciado</li>
+            <li class="informacion__detalle">Anuncie aqui</li>
+          </ul>
+        </div>
+        <div class="contacto__formulario">
+          <h1 class="formulario__title">Hable con nosotros</h1>
+          <form class="formulario__form" action="">
+            <div class="form__group">
+              <input
+              class="form__nombre"
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder=" "
+              />
+              <label for="nombre" class="form__title">Nombre y Apellido</label>              
+            </div>
+
+            <div class="form__group">
+              <input
+              class="form__comentario"
+              name="comentario"
+              id="comentario"
+              placeholder=" "
+            ></input>
+              <label for="comentario" class="form__title">Escribe tu mensaje</label>
+            </div>
+            <input class="form__btn" type="submit" value="Enviar mensaje" />
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <p>Development By Miguel Herrera for Alura Challenger G4</p>
+        <p>2023</p>
+      </footer>
+    </div>
+  </body>
 </html>

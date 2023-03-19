@@ -1,6 +1,18 @@
+:root {
+  --color_fondo: #f5f5f5;
+  --color_text-title: #464646;
+  --color_text-link: #2a7ae4;
+  --color_fondo-verdeAlura: #eaf2fd;
+  --font-defect: "Raleway";
+}
 * {
   box-sizing: border-box;
   margin: 0;
+}
+body {
+  width: 98.5vw;
+  background: var(--color_fondo);
+  font-family: var(--font-defect);
 }
 h1 {
   display: block;

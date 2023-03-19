@@ -1,0 +1,58 @@
+.menu {
+  display: flex;
+  background: #ffffff;
+  width: 100%;
+  padding: 3% 5%;
+  justify-content: space-between;
+}
+.menu__buscador {
+  width: 100%;
+}
+.buscador__container {
+  display: flex;
+  height: 100%;
+  background: var(--color_fondo);
+  margin-left: 3%;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.buscador__input {
+  background: none;
+  color: var(--color_text-title);
+  border: none;
+  height: 100%;
+  margin-left: 5%;
+  flex-grow: 2;
+}
+.buscador__boton {
+  padding: 1em 1.5em;
+  display: flex;
+  border: none;
+  background: url(../resource/icon/Vector.png) no-repeat center left / 1.2rem;
+}
+.menu__login {
+  display: flex;
+  flex-grow: 1;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.login__boton {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color_text-link);
+  border: 1px solid var(--color_text-link);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.login__boton:hover {
+  color: #ffffff;
+  border: none;
+  background: var(--color_text-link);
+}
