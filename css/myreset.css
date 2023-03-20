@@ -10,7 +10,7 @@
   margin: 0;
 }
 body {
-  width: 98.5vw;
+  width: 98vw;
   background: var(--color_fondo);
   font-family: var(--font-defect);
 }

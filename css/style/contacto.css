@@ -11,7 +11,7 @@
   margin: 0 1rem 0 0;
   width: 50%;
 }
-.logo__img {
+.contacto__img {
   width: 100%;
 }
 .contacto__informacion {
@@ -53,6 +53,7 @@
   width: 100%;
   margin-bottom: 1em;
   position: relative;
+  box-shadow: 0 5px 10px -5px rgba(0 0 0 / 30%);
 }
 .form__nombre {
   width: 100%;

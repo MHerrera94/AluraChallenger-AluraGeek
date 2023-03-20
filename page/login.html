@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
     />
     <link rel="stylesheet" href="../css/myreset.css" />
-    <link rel="stylesheet" href="../css/style/menu.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
     <link rel="stylesheet" href="../css/style/contacto.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/style/footer.css">
@@ -51,13 +51,30 @@
             />
           </form>
         </div>
+        <div class="menu__login">
+          <a href="./page/login.html" class="login__boton">Login</a>
+        </div>
       </nav>
+      <div class="login__container">
+        <h1 class="login__title">Iniciar Sesion</h1>
+        <form action="" class="login__formulario" id="login__form">
+          <div class="formulario__group">
+            <input type="email" id="email" name="email" class="formulario__input" placeholder=" ">
+            <label for="email" class="formulario__label">Escriba su correo electronico</label>
+          </div>
+          <div class="formulario__group">
+            <input type="password" id="password" name="password" class="formulario__input" placeholder=" ">
+            <label for="" class="formulario__label">Escriba su contraseña</label>
+          </div>
+          <input type="submit" id="boton" name="login__boton" class="formulario__btn" value="Entrar">
+        </form>
+      </div>
       <section class="contacto">
         <div class="contacto__logo">
           <img
             src="../resource/icon/Logo.png"
             alt="Alura Logo"
-            class="logo__img"
+            class="contacto__img"
           />
         </div>
         <div class="contacto__informacion">

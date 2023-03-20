@@ -26,6 +26,7 @@
   height: 100%;
   margin-left: 5%;
   flex-grow: 2;
+  outline: none;
 }
 .buscador__boton {
   padding: 1em 1.5em;
