@@ -13,6 +13,7 @@ body {
   width: 98vw;
   background: var(--color_fondo);
   font-family: var(--font-defect);
+  color: var(--color_text-title);
 }
 h1 {
   display: block;

@@ -1,0 +1,74 @@
+.container {
+  width: 100%;
+}
+.product__container {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.product__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  align-items: center;
+}
+.header__title {
+  font-size: 2rem;
+  height: 100%;
+  color: var(--color_text-title);
+}
+.header__agregar {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  background: var(--color_text-link);
+  border: 1px solid var(--color_text-link);
+  padding: 1rem;
+}
+.product__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.item__container {
+  margin: 0 1rem 1rem 0;
+  position: relative;
+}
+.item__img {
+  position: relative;
+  display: flex;
+}
+.item__boton- {
+  position: absolute;
+  padding: 1.2rem;
+  z-index: 2;
+  top: 0;
+  right: 0.5rem;
+}
+.borrar {
+  background: url(../resource/icon/bote_basura.svg) no-repeat center right /
+    1.2rem;
+  right: 2.5rem;
+}
+.editar {
+  background: url(../resource/icon/lapiz.png) no-repeat center right / 1.2rem;
+}
+.borrar:hover {
+  background: url(../resource/icon/delete_white_24dp.svg) no-repeat center right /
+    2.1rem;
+  right: 2rem;
+}
+.editar:hover {
+  background: url(../resource/icon/lapiz_azul.png) no-repeat center right /
+    1.2rem;
+}
+.item__container li {
+  margin-bottom: 1rem;
+}
+.item__cost {
+  font-weight: bold;
+}
