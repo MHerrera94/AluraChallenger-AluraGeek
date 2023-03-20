@@ -52,11 +52,22 @@
           </form>
         </div>
         <div class="menu__login">
-          <a href="./page/login.html" class="login__boton"
+          <a href="../index.html" class="login__boton"
             >Menu Administrador</a
           >
         </div>
       </nav>
+      <div class="agregar__container">
+        <h1 class="agregar__title">Agregar Nuevo Producto</h1>
+        <form action="" class="agregar__formulario">
+          <div class="formulario__group"><input id="image" placeholder=" " name="image" type="text" class="formulario__input"><label for="image" class="formulario__label">URL de imagen</label></div>
+          <div class="formulario__group"><input id="categoria" placeholder=" " name="categoria" type="text" class="formulario__input"><label for="categoria" class="formulario__label">Categoria</label></div>
+          <div class="formulario__group"><input id="nombre_producto" placeholder=" " name="nombre_producto" type="text" class="formulario__input"><label for="nombre_producto" class="formulario__label">Nombre del Producto</label></div>
+          <div class="formulario__group"><input id="costo" placeholder=" " name="costo" type="number" class="formulario__input"><label for="costo" class="formulario__label"></label>Precio</div>
+          <div class="formulario__group"><input id="descripcion" placeholder=" " name="descripcion" type="text" class="formulario__input"><label for="descripcion" class="formulario__label">Descripcion del Producto</label></div>
+          <input name="submit" type="submit" id="submit" class="formulario__boton" value="Agregar Producto">
+        </form>
+      </div>
       <section class="contacto">
         <div class="contacto__logo">
           <img
