@@ -1,6 +1,29 @@
 .footer {
+  display: flex;
   width: 100%;
-  height: 20vh;
   text-align: center;
   padding: 5%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.title__network {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+.title__network__item {
+  display: flex;
+  justify-content: space-around;
+}
+.title__network__item a {
+  display: flex;
+  align-items: center;
+}
+.title__network__item img {
+  width: 100%;
+  height: 1.5rem;
+  margin-left: 0.5rem;
 }
