@@ -1,6 +1,9 @@
 .container {
   width: 100%;
 }
+.user {
+  display: none;
+}
 .product__container {
   width: 100%;
   padding: 5%;

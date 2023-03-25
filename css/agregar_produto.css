@@ -3,7 +3,7 @@
 }
 .agregar__container {
   width: 50%;
-  height: 90vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -57,10 +57,11 @@
   font-family: var(--font-defect);
   color: var(--color_text-title);
   outline: none;
+  padding: 1.2rem 1rem 0 1rem;
 }
 .formulario__label {
   position: absolute;
-  top: 30%;
+  top: 15%;
   left: 5%;
   cursor: pointer;
   font-family: var(--font-defect);

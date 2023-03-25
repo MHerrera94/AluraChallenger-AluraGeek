@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../css/style/contacto.css">
     <link rel="stylesheet" href="../css/agregar_produto.css">
     <link rel="stylesheet" href="../css/style/footer.css">
+    <script defer type="module" src="../script/components/create_producto_component.js"></script>
   </head>
   <body>
     <div class="container">
@@ -59,7 +60,7 @@
       </nav>
       <div class="agregar__container">
         <h1 class="agregar__title">Agregar Nuevo Producto</h1>
-        <form action="" class="agregar__formulario">
+        <form id="productForm" action="" class="agregar__formulario">
           <div class="formulario__group"><input id="image" placeholder=" " name="image" type="text" class="formulario__input"><label for="image" class="formulario__label">URL de imagen</label></div>
           <div class="formulario__group"><input id="categoria" placeholder=" " name="categoria" type="text" class="formulario__input"><label for="categoria" class="formulario__label">Categoria</label></div>
           <div class="formulario__group"><input id="nombre_producto" placeholder=" " name="nombre_producto" type="text" class="formulario__input"><label for="nombre_producto" class="formulario__label">Nombre del Producto</label></div>
