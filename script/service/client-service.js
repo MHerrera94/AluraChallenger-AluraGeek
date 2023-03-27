@@ -3,7 +3,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebas
 import {
   getFirestore,
   collection,
+  getDocs,
   addDoc,
+  getDoc,
 } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -23,6 +25,8 @@ const app = initializeApp(firebaseConfig);
 
 /* Metodos CRUD*/
 const db = getFirestore();
+
+/* CRUD: Create */
 const crearProducto = (
   urlImg,
   category,
@@ -39,4 +43,12 @@ const crearProducto = (
     productDescripton,
     itemNumber,
   });
-export const clientService = { crearProducto };
+/* CRUD: Read */
+const listProducts = () => getDocs(collection(db, "productos"));
+const detailProduct = (id) => getDoc(collection(db, "productos"), id);
+/*CRUD: Update*/
+
+/*CRUD: Delete*/
+
+/*Exportde todos los metodos CRUD*/
+export const clientService = { crearProducto, listProducts, detailProduct };

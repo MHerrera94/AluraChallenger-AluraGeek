@@ -4,7 +4,6 @@ const productForm = document.getElementById("productForm");
 
 productForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  console.log("funcionando");
   const urlImg = document.getElementById("image").value;
   const category = document.getElementById("categoria").value;
   const nameProduct = document.getElementById("nombre_producto").value;
@@ -13,6 +12,7 @@ productForm.addEventListener("submit", async (event) => {
   let itemNumber = Math.floor(Math.random() * 90000 + 10000);
 
   try {
+    // const div_poput = Document.getElementById("poput");
     if (validacionDatos(urlImg, category, nameProduct, cost, description)) {
       const products = await clientService.crearProducto(
         urlImg,
@@ -22,8 +22,8 @@ productForm.addEventListener("submit", async (event) => {
         description,
         itemNumber
       );
-      alert("Producto agregado con exito");
-      productForm.reset();
+      poput.classList.remove("hidden");
+      document.body.classList.add("block__window");
     }
   } catch (error) {
     console.error();
