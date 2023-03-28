@@ -6,6 +6,7 @@ import {
   getDocs,
   addDoc,
   getDoc,
+  onSnapshot,
 } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -46,9 +47,16 @@ const crearProducto = (
 /* CRUD: Read */
 const listProducts = () => getDocs(collection(db, "productos"));
 const detailProduct = (id) => getDoc(collection(db, "productos"), id);
+const onGetProducts = (callback) =>
+  onSnapshot(collection(db, "productos"), callback);
 /*CRUD: Update*/
 
 /*CRUD: Delete*/
 
-/*Exportde todos los metodos CRUD*/
-export const clientService = { crearProducto, listProducts, detailProduct };
+/*Export de todos los metodos CRUD*/
+export const clientService = {
+  crearProducto,
+  listProducts,
+  detailProduct,
+  onGetProducts,
+};
