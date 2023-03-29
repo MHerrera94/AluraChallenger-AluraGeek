@@ -1,4 +1,4 @@
-import { clientService } from "../service/client-service.js";
+import { productService } from "../service/product-service.js";
 
 const createNewItem = (urlImg, nameProduct, cost, id) => {
   const ul = document.createElement("ul");
@@ -26,7 +26,7 @@ divContainer_consola.classList.add("item__container");
 const divContainer_variedades = document.createElement("div");
 divContainer_variedades.classList.add("item__container");
 
-clientService.onGetProducts((querySnapshot) => {
+productService.onGetProducts((querySnapshot) => {
   divContainer_starWars.innerHTML = "";
   divContainer_consola.innerHTML = "";
   divContainer_variedades.innerHTML = "";
@@ -39,12 +39,18 @@ clientService.onGetProducts((querySnapshot) => {
       data.cost,
       doc.id
     );
-    if (data.category == "star Wars") {
-      divContainer_starWars.appendChild(newItem);
-    } else if (data.category == "consola") {
-      divContainer_consola.appendChild(newItem);
-    } else if (data.category == "variedades") {
-      divContainer_variedades.appendChild(newItem);
+    switch (data.category) {
+      case "starWars" || "star wars" || "star Wars" || "starwars":
+        divContainer_starWars.appendChild(newItem);
+        break;
+
+      case "consola":
+        divContainer_consola.appendChild(newItem);
+        break;
+
+      default:
+        divContainer_variedades.appendChild(newItem);
+        break;
     }
   });
   star_wars.appendChild(divContainer_starWars);
