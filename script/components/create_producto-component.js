@@ -1,4 +1,4 @@
-import { clientService } from "../service/client-service.js";
+import { productService } from "../service/product-service.js";
 
 const productForm = document.getElementById("productForm");
 
@@ -14,7 +14,7 @@ productForm.addEventListener("submit", async (event) => {
   try {
     // const div_poput = Document.getElementById("poput");
     if (validacionDatos(urlImg, category, nameProduct, cost, description)) {
-      const products = await clientService.crearProducto(
+      const products = await productService.crearProducto(
         urlImg,
         category,
         nameProduct,

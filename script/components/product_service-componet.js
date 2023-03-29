@@ -1,4 +1,4 @@
-import { clientService } from "../service/client-service.js";
+import { productService } from "../service/product-service.js";
 
 const createNewItem = (urlImg, nameProduct, cost, id) => {
   const ul = document.createElement("ul");
@@ -26,7 +26,7 @@ divContainer_consola.classList.add("item__container");
 const divContainer_variedades = document.createElement("div");
 divContainer_variedades.classList.add("item__container");
 
-clientService.onGetProducts((querySnapshot) => {
+productService.onGetProducts((querySnapshot) => {
   divContainer_starWars.innerHTML = "";
   divContainer_consola.innerHTML = "";
   divContainer_variedades.innerHTML = "";
