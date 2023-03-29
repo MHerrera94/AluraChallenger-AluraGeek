@@ -1,38 +1,42 @@
 import { productService } from "../service/product-service.js";
 
 const productForm = document.getElementById("productForm");
-const itemNumber = "";
+let itemNumber = "";
 
 const obtenerInformacion = async () => {
   const url = new URL(window.location);
   const id = url.searchParams.get("id");
 
-  if (id == null) {
-  }
-  const urlImg = document.getElementById("image");
-  const category = document.getElementById("categoria");
-  const nameProduct = document.getElementById("nombre_producto");
-  const cost = document.getElementById("costo");
-  const description = document.getElementById("descripcion");
-  // usando await method
-  try {
-    const product = await productService.detailProduct(id);
-    const data = product.data();
-    if (data.nameProduct && data.category) {
-      urlImg.value = data.urlImg;
-      category.value = data.category;
-      nameProduct.value = data.nameProduct;
-      cost.value = data.cost;
-      description.value = data.productDescripton;
-      itemNumber = data.itemNumber;
-    } else {
-      throw new Error();
+  if (id != null) {
+    const urlImg = document.getElementById("image");
+    const category = document.getElementById("categoria");
+    const nameProduct = document.getElementById("nombre_producto");
+    const cost = document.getElementById("costo");
+    const description = document.getElementById("descripcion");
+    const agregarTitle = document.getElementById("agregar__title");
+    const btn_submit = document.getElementById("submit");
+    // usando await method
+    try {
+      const product = await productService.detailProduct(id);
+      const data = product.data();
+      agregarTitle.innerText = "Actualizacion de productos";
+      btn_submit.value = "Actualizar producto";
+      if (data.nameProduct && data.category) {
+        urlImg.value = data.urlImg;
+        category.value = data.category;
+        nameProduct.value = data.nameProduct;
+        cost.value = data.cost;
+        description.value = data.productDescripton;
+        itemNumber = data.itemNumber;
+      } else {
+        throw new Error();
+      }
+    } catch (error) {
+      window.location.href =
+        "https://mherrera94.github.io/AluraChallenger-AluraGeek/page/productos.html";
+      alert("Ocurrio un error al cargar los datos");
+      console.log(error);
     }
-  } catch (error) {
-    // window.location.href =
-    //   "https://mherrera94.github.io/AluraChallenger-AluraGeek/page/productos.html";
-    alert("Ocurrio un error al cargar los datos");
-    console.error();
   }
 };
 
