@@ -39,12 +39,18 @@ productService.onGetProducts((querySnapshot) => {
       data.cost,
       doc.id
     );
-    if (data.category == "star Wars") {
-      divContainer_starWars.appendChild(newItem);
-    } else if (data.category == "consola") {
-      divContainer_consola.appendChild(newItem);
-    } else if (data.category == "variedades") {
-      divContainer_variedades.appendChild(newItem);
+    switch (data.category) {
+      case "starWars" || "star wars" || "star Wars" || "starwars":
+        divContainer_starWars.appendChild(newItem);
+        break;
+
+      case "consola":
+        divContainer_consola.appendChild(newItem);
+        break;
+
+      default:
+        divContainer_variedades.appendChild(newItem);
+        break;
     }
   });
   star_wars.appendChild(divContainer_starWars);
