@@ -62,7 +62,6 @@
 .form__nombre {
   width: 100%;
   height: 100%;
-  padding: 1em;
   font-family: var(--font-defect);
   color: var(--color_text-title);
   border: none;
@@ -71,7 +70,6 @@
 .form__comentario {
   width: 100%;
   height: 100%;
-  padding: 1em;
   font-family: var(--font-defect);
   color: var(--color_text-title);
   border: none;

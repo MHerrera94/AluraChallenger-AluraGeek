@@ -13,7 +13,8 @@
   width: 50%;
   height: 20%;
   text-align: center;
-  padding: 2em;
+  padding: 2rem;
+  font-size: 1.5rem;
 }
 .login__formulario {
   width: 50%;
@@ -53,7 +54,7 @@
 }
 .formulario__label {
   position: absolute;
-  top: 30%;
+  top: 15%;
   left: 5%;
   cursor: pointer;
   font-family: var(--font-defect);

@@ -10,10 +10,11 @@
   margin: 0;
 }
 body {
-  width: 98vw;
+  width: 99vw;
   background: var(--color_fondo);
   font-family: var(--font-defect);
   color: var(--color_text-title);
+  overflow-x: hidden;
 }
 h1 {
   display: block;
