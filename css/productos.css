@@ -75,3 +75,6 @@
 .item__cost {
   font-weight: bold;
 }
+.disable {
+  display: none;
+}
