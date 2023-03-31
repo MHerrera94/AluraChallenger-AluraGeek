@@ -53,14 +53,19 @@
             />
           </form>
         </div>
-        <div class="menu__login">
-          <a href="../index.html" class="login__boton">Home</a>
+        <div class="menu__boton__container">
+          <div class="menu__login">
+            <a href="../index.html" class="login__boton">Home</a>
+          </div>
+          <div id="logout" class="menu__login disable__logout">
+            <a href="../index.html" class="login__boton">Cerrar Sesion</a>
+          </div>
         </div>
       </nav>
       <div class="product__container">
         <div class="product__header">
           <h1 class="header__title">Todos los productos</h1>
-          <a class="header__agregar" href="./agregar_producto.html">Agregar Producto</a>
+          <a id="btnAgregar" class="header__agregar disable" href="./agregar_producto.html">Agregar Producto</a>
         </div>
         <div id="itemContainer" class="product__items">
           <ul class="item__container">

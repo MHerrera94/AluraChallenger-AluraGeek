@@ -17,6 +17,8 @@ loginForm.addEventListener("submit", async (event) => {
         window.location.href =
           "https://mherrera94.github.io/AluraChallenger-AluraGeek/index.html";
       } else {
+        alert("Intente nuevamente Datos incorrectos");
+        return;
       }
     });
   }
