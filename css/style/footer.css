@@ -10,13 +10,13 @@
 .title__network {
   display: flex;
   height: 100%;
-  width: 100%;
   justify-content: space-around;
   margin-top: 1rem;
 }
 .title__network__item {
   display: flex;
   justify-content: space-around;
+  margin: 0 1rem;
 }
 .title__network__item a {
   display: flex;

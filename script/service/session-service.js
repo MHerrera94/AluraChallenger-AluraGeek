@@ -1,7 +1,6 @@
 function comprobarCookies() {
   var x = sessionStorage.getItem("idSession");
   if (x != null) {
-    window.alert("funciona");
     const btnLogout = document.getElementById("logout");
     const btnLogin = document.getElementById("login");
     const home = document.getElementById("home");

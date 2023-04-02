@@ -7,7 +7,6 @@ loginForm.addEventListener("submit", async (event) => {
   const password = document.getElementById("password").value;
   let idSession = "";
   if (validate()) {
-    console.log("Inicio de session");
     const querySnapshot = await userService.userCollection();
     querySnapshot.forEach((doc) => {
       const user = doc.data();
