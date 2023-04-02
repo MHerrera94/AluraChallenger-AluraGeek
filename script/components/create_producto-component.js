@@ -32,8 +32,7 @@ const obtenerInformacion = async () => {
         throw new Error();
       }
     } catch (error) {
-      window.location.href =
-        "https://mherrera94.github.io/AluraChallenger-AluraGeek/page/productos.html";
+      window.location.href = "./productos.html";
       alert("Ocurrio un error al cargar los datos");
       console.log(error);
     }
@@ -70,8 +69,7 @@ const updateProduct = async () => {
       productDescripton: description,
       itemNumber: itemNumber,
     });
-    window.location.href =
-      "https://mherrera94.github.io/AluraChallenger-AluraGeek/page/productos.html";
+    window.location.href = "./productos.html";
     alert("Producto actualizado con exito");
   } catch (error) {
     console.error();

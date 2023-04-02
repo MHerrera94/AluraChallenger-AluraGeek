@@ -14,8 +14,7 @@ loginForm.addEventListener("submit", async (event) => {
       if (user.email == email && user.password == password) {
         idSession = user.idSession;
         sessionStorage.setItem("idSession", idSession);
-        window.location.href =
-          "https://mherrera94.github.io/AluraChallenger-AluraGeek/index.html";
+        window.location.href = "../index.html";
       } else {
         alert("Intente nuevamente Datos incorrectos");
         return;

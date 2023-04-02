@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../css/style/contacto.css">
     <link rel="stylesheet" href="../css/detalle_producto.css">
     <link rel="stylesheet" href="../css/style/footer.css">
+    <script defer type="module" src="../script/components/detalle_product-component.js"></script>
     <script defer src="../script/service/session-service.js"></script>
   </head>
   <body>
@@ -61,7 +62,7 @@
           </div>
         </div>
       </nav>
-      <section class="detalle__container">
+      <section id="detailContaint" class="detalle__container">
         <div class="detalle__img">
           <img src="../resource/img/star-wars_02.png" alt="Product 01" class="detalle__img__imagen">
         </div>
@@ -75,7 +76,7 @@
         <div class="seccion__title">
           <h1 class="seccion__title__text">Productos Similares</h1>
         </div>
-        <div class="item__container">
+        <div id="similarProduct" class="item__container">
           <ul class="seccion__item">
             <li class="item__img">
               <img src="../resource/img/console.png" alt="" />
