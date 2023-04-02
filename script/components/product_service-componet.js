@@ -26,34 +26,67 @@ divContainer_consola.classList.add("item__container");
 const divContainer_variedades = document.createElement("div");
 divContainer_variedades.classList.add("item__container");
 
-productService.onGetProducts((querySnapshot) => {
-  divContainer_starWars.innerHTML = "";
-  divContainer_consola.innerHTML = "";
-  divContainer_variedades.innerHTML = "";
+const generarItem = (maxItem) => {
+  let itemConsola = 0;
+  let itemStarWars = 0;
+  let itemVariedades = 0;
+  productService.onGetProducts((querySnapshot) => {
+    divContainer_starWars.innerHTML = "";
+    divContainer_consola.innerHTML = "";
+    divContainer_variedades.innerHTML = "";
 
-  querySnapshot.forEach((doc) => {
-    const data = doc.data();
-    const newItem = createNewItem(
-      data.urlImg,
-      data.nameProduct,
-      data.cost,
-      doc.id
-    );
-    switch (data.category) {
-      case "starWars" || "star wars" || "star Wars" || "starwars":
-        divContainer_starWars.appendChild(newItem);
-        break;
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      const newItem = createNewItem(
+        data.urlImg,
+        data.nameProduct,
+        data.cost,
+        doc.id
+      );
 
-      case "consola":
-        divContainer_consola.appendChild(newItem);
-        break;
+      switch (data.category) {
+        case "starWars" || "star wars" || "star Wars" || "starwars":
+          if (itemStarWars <= maxItem) {
+            divContainer_starWars.appendChild(newItem);
+            itemStarWars++;
+          }
+          break;
 
-      default:
-        divContainer_variedades.appendChild(newItem);
-        break;
-    }
+        case "consola":
+          if (itemConsola <= maxItem) {
+            divContainer_consola.appendChild(newItem);
+            itemConsola++;
+          }
+          break;
+
+        default:
+          if (itemVariedades <= maxItem) {
+            divContainer_variedades.appendChild(newItem);
+            itemVariedades++;
+          }
+          break;
+      }
+    });
+
+    star_wars.appendChild(divContainer_starWars);
+    consola.appendChild(divContainer_consola);
+    variedades.appendChild(divContainer_variedades);
   });
-  star_wars.appendChild(divContainer_starWars);
-  consola.appendChild(divContainer_consola);
-  variedades.appendChild(divContainer_variedades);
+};
+
+const mediaqueryList = window.matchMedia("(max-width: 768px)");
+mediaqueryList.addEventListener("change", () => {
+  if (mediaqueryList.matches) {
+    console.log("768px");
+    generarItem(3);
+  } else {
+    console.log("769px+");
+    generarItem(5);
+  }
 });
+
+if (mediaqueryList.matches) {
+  generarItem(3);
+} else {
+  generarItem(5);
+}
