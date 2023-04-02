@@ -5,8 +5,12 @@
   padding: 3% 5%;
   justify-content: space-between;
 }
+.menu__logo {
+  display: flex;
+}
 .menu__buscador {
-  width: 100%;
+  width: 50%;
+  margin: 0 3%;
 }
 .buscador__container {
   display: flex;
@@ -36,21 +40,17 @@
 }
 .menu__boton__container {
   display: flex;
-  width: 60%;
   flex-grow: 1;
+  justify-content: center;
 }
 .menu__login {
   display: flex;
   width: 100%;
-  height: 100%;
   justify-content: flex-end;
-  align-items: center;
-  margin-left: 1rem;
 }
 .login__boton {
-  width: 100%;
-  height: 100%;
   display: flex;
+  width: 50%;
   justify-content: center;
   align-items: center;
   color: var(--color_text-link);

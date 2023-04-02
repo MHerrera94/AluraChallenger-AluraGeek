@@ -1,0 +1,40 @@
+/* Media query 768px*/
+
+@media (max-width: 768px) {
+  /* Estilos del menu*/
+  .menu {
+    padding: 3%;
+  }
+  .login__boton {
+    width: 100%;
+  }
+  /* Estilos section productos*/
+  .productos {
+    padding: 3%;
+  }
+  /* Estilos section contacto*/
+  .contacto__logo {
+    position: relative;
+    margin-right: 2rem;
+  }
+  .contacto__informacion {
+    position: absolute;
+    margin-top: 3rem;
+  }
+  .contacto__formulario {
+    margin-top: 0.6rem;
+  }
+}
+
+/* Media query 360px*/
+@media (max-width: 375px) {
+  .menu {
+    height: 10vh;
+  }
+  .logo__img {
+    height: 100%;
+  }
+  .item__container {
+    flex-wrap: wrap;
+  }
+}
