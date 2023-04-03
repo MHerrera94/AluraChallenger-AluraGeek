@@ -19,6 +19,7 @@
     color: #ffffff;
     border: none;
     background: var(--color_text-link);
+    font-size: 1rem;
   }
   .menu__label {
     display: flex;
@@ -46,10 +47,6 @@
   }
   .menu__main:checked ~ .menu__login {
     right: 3%;
-  }
-  .login__boton {
-    width: 100%;
-    font-size: 1rem;
   }
 
   /* Estilos section productos*/
