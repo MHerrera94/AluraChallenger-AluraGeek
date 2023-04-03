@@ -43,28 +43,43 @@ const generarItem = (maxItem) => {
         data.cost,
         doc.id
       );
-
-      switch (data.category) {
-        case "starWars" || "star wars" || "star Wars" || "starwars":
-          if (itemStarWars <= maxItem) {
+      if (maxItem == 0) {
+        switch (data.category) {
+          case "starWars" || "star wars" || "star Wars" || "starwars":
             divContainer_starWars.appendChild(newItem);
-            itemStarWars++;
-          }
-          break;
+            break;
 
-        case "consola":
-          if (itemConsola <= maxItem) {
+          case "consola":
             divContainer_consola.appendChild(newItem);
-            itemConsola++;
-          }
-          break;
+            break;
 
-        default:
-          if (itemVariedades <= maxItem) {
+          default:
             divContainer_variedades.appendChild(newItem);
-            itemVariedades++;
-          }
-          break;
+            break;
+        }
+      } else {
+        switch (data.category) {
+          case "starWars" || "star wars" || "star Wars" || "starwars":
+            if (itemStarWars <= maxItem) {
+              divContainer_starWars.appendChild(newItem);
+              itemStarWars++;
+            }
+            break;
+
+          case "consola":
+            if (itemConsola <= maxItem) {
+              divContainer_consola.appendChild(newItem);
+              itemConsola++;
+            }
+            break;
+
+          default:
+            if (itemVariedades <= maxItem) {
+              divContainer_variedades.appendChild(newItem);
+              itemVariedades++;
+            }
+            break;
+        }
       }
     });
 
@@ -75,18 +90,21 @@ const generarItem = (maxItem) => {
 };
 
 const mediaqueryList = window.matchMedia("(max-width: 768px)");
+const mediaqueryListWrong = window.matchMedia("(max-width: 1440px)");
 mediaqueryList.addEventListener("change", () => {
   if (mediaqueryList.matches) {
-    console.log("768px");
     generarItem(3);
-  } else {
-    console.log("769px+");
+  } else if (mediaqueryListWrong.matches) {
     generarItem(5);
+  } else {
+    generarItem(0);
   }
 });
 
 if (mediaqueryList.matches) {
   generarItem(3);
-} else {
+} else if (mediaqueryListWrong.matches) {
   generarItem(5);
+} else {
+  generarItem(0);
 }
