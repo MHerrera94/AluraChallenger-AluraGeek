@@ -69,8 +69,15 @@ const updateProduct = async () => {
       productDescripton: description,
       itemNumber: itemNumber,
     });
-    window.location.href = "./productos.html";
-    alert("Producto actualizado con exito");
+    const btnPoput = document.getElementById("btnPoput");
+    const poputTitle = document.getElementById("poputTitle");
+    poputTitle.innerText = "Producto actualizado con exito";
+    poput.classList.remove("hidden");
+    document.body.classList.add("block__window");
+    btnPoput.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = "./productos.html";
+    });
   } catch (error) {
     console.error();
   }

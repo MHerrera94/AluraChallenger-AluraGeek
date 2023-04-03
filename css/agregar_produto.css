@@ -4,6 +4,7 @@
 .agregar__container {
   width: 50%;
   height: 80vh;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
