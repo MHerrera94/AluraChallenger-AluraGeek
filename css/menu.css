@@ -57,6 +57,9 @@
 .menu__label {
   display: none;
 }
+#login {
+  right: initial;
+}
 .login__boton {
   display: flex;
   width: 100%;

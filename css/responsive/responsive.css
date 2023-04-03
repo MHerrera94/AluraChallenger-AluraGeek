@@ -36,6 +36,9 @@
   #logout {
     top: 20%;
   }
+  #logout.top12 {
+    top: 12%;
+  }
   .menu__label:hover {
     color: #ffffff;
     border: none;
