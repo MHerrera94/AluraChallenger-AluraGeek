@@ -40,7 +40,16 @@ loginForm.addEventListener("submit", async (event) => {
     });
   }
 });
-
+const hiddenPassword = document.getElementById("hidden_password");
+hiddenPassword.addEventListener("change", (event) => {
+  const password = document.getElementById("password");
+  event.preventDefault();
+  if (hiddenPassword.checked) {
+    password.type = "text";
+  } else {
+    password.type = "password";
+  }
+});
 const validate = () => {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
