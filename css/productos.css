@@ -46,6 +46,7 @@
 .item__img {
   position: relative;
   display: flex;
+  max-width: 176px;
 }
 .img__imagen {
   width: 100%;

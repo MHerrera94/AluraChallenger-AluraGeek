@@ -93,6 +93,9 @@ const addProduct = async () => {
   try {
     // const div_poput = Document.getElementById("poput");
     if (validacionDatos(urlImg, category, nameProduct, cost, description)) {
+      poput.classList.remove("hidden");
+      document.body.classList.add("block__window");
+      const btnPoput = document.getElementById("btnPoput");
       const products = await productService.crearProducto(
         urlImg,
         category,
@@ -101,8 +104,7 @@ const addProduct = async () => {
         description,
         itemNumber
       );
-      poput.classList.remove("hidden");
-      document.body.classList.add("block__window");
+      btnPoput.classList.remove("hidden");
     }
   } catch (error) {
     console.error();
