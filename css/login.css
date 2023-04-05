@@ -82,3 +82,29 @@
   color: var(--color_text-link);
   border: 1px solid var(--color_text-link);
 }
+.formulario__hidden-password {
+  display: none;
+}
+.formulario__label_hidden-password {
+  padding: 1rem;
+  position: absolute;
+  bottom: 25%;
+  align-items: center;
+  right: 1rem;
+  background: url(../resource/icon/ojo.svg) no-repeat center center / 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.formulario__hidden-password:checked + .formulario__label_hidden-password {
+  background: url(../resource/icon/ojos-cruzados.svg) no-repeat center center /
+    1.5rem;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
