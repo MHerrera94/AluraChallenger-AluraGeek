@@ -53,6 +53,7 @@
   font-family: var(--font-defect);
   color: var(--color_text-title);
   outline: none;
+  padding-left: 1rem;
 }
 .formulario__label {
   position: absolute;
