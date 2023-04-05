@@ -18,9 +18,26 @@ loginForm.addEventListener("submit", async (event) => {
   }
   if (idSession != "") {
     sessionStorage.setItem("idSession", idSession);
-    window.location.href = "../index.html";
+    const btnPoput = document.getElementById("btnPoput");
+    poput.classList.remove("hidden");
+    document.body.classList.add("block__window");
+    btnPoput.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = "../index.html";
+    });
   } else {
-    alert("Intente nuevamente Datos incorrectos");
+    const poputTitle = document.getElementById("poputTitle");
+    const text = "Sesion iniciada con exito";
+    poputTitle.innerText = "Intente nuevamente datos incorrectos";
+    const btnPoput = document.getElementById("btnPoput");
+    poput.classList.remove("hidden");
+    document.body.classList.add("block__window");
+    btnPoput.addEventListener("click", (event) => {
+      event.preventDefault();
+      poput.classList.add("hidden");
+      poputTitle.innerText = text;
+      document.body.classList.remove("block__window");
+    });
   }
 });
 
