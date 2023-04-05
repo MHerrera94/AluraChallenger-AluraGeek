@@ -10,15 +10,20 @@ loginForm.addEventListener("submit", async (event) => {
     const querySnapshot = await userService.userCollection();
     querySnapshot.forEach((doc) => {
       const user = doc.data();
-      if (user.email == email && user.password == password) {
-        idSession = user.idSession;
-        sessionStorage.setItem("idSession", idSession);
-        window.location.href = "../index.html";
-      } else {
-        alert("Intente nuevamente Datos incorrectos");
-        return;
-      }
+      const login = () => {
+        if (user.email == email && user.password == password) {
+          idSession = user.idSession;
+          return idSession;
+        }
+      };
+      login();
     });
+  }
+  if (idSession != "") {
+    sessionStorage.setItem("idSession", idSession);
+    window.location.href = "../index.html";
+  } else {
+    alert("Intente nuevamente Datos incorrectos");
   }
 });
 
