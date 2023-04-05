@@ -10,13 +10,10 @@ loginForm.addEventListener("submit", async (event) => {
     const querySnapshot = await userService.userCollection();
     querySnapshot.forEach((doc) => {
       const user = doc.data();
-      const login = () => {
-        if (user.email == email && user.password == password) {
-          idSession = user.idSession;
-          return idSession;
-        }
-      };
-      login();
+      if (user.email == email && user.password == password) {
+        idSession = user.idSession;
+        return idSession;
+      }
     });
   }
   if (idSession != "") {
