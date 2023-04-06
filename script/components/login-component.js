@@ -1,5 +1,11 @@
 import { userService } from "../service/user-service.js";
-
+const redirigirLogin = () => {
+  let id = sessionStorage.getItem("idSession");
+  if (id != null) {
+    window.location.href = "../index.html";
+  }
+};
+redirigirLogin();
 const loginForm = document.getElementById("login__form");
 loginForm.addEventListener("submit", async (event) => {
   event.preventDefault();
