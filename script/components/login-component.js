@@ -1,4 +1,6 @@
 import { userService } from "../service/user-service.js";
+const body_container = document.getElementById("container");
+
 const redirigirLogin = () => {
   let id = sessionStorage.getItem("idSession");
   if (id != null) {
@@ -24,6 +26,7 @@ loginForm.addEventListener("submit", async (event) => {
   }
   if (idSession != "") {
     sessionStorage.setItem("idSession", idSession);
+    userService.insertPoput(body_container, "Inicio de sesion correcto");
     const btnPoput = document.getElementById("btnPoput");
     poput.classList.remove("hidden");
     document.body.classList.add("block__window");
@@ -32,16 +35,17 @@ loginForm.addEventListener("submit", async (event) => {
       window.location.href = "../index.html";
     });
   } else {
-    const poputTitle = document.getElementById("poputTitle");
-    const text = "Sesion iniciada con exito";
-    poputTitle.innerText = "Intente nuevamente datos incorrectos";
+    userService.insertPoput(
+      body_container,
+      "Datos incorrectos intente nuevamente"
+    );
     const btnPoput = document.getElementById("btnPoput");
     poput.classList.remove("hidden");
     document.body.classList.add("block__window");
     btnPoput.addEventListener("click", (event) => {
       event.preventDefault();
       poput.classList.add("hidden");
-      poputTitle.innerText = text;
+      userService.removePoput(body_container);
       document.body.classList.remove("block__window");
     });
   }
