@@ -76,6 +76,7 @@
   color: #ffffff;
   background: var(--color_text-link);
   border: 1px solid var(--color_text-link);
+  cursor: pointer;
 }
 .formulario__btn:hover {
   background: #ffffff;

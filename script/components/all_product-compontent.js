@@ -1,6 +1,7 @@
 import { productService } from "../service/product-service.js";
+import { userService } from "../service/user-service.js";
 const x = sessionStorage.getItem("idSession");
-
+const body_container = document.getElementById("container");
 const createNewItem = (urlImg, nameProduct, cost, id, itemNumber) => {
   const ul = document.createElement("ul");
   ul.classList.add("item__container");
